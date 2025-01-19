@@ -10,28 +10,22 @@ const Navbar = () => {
   
     return (
       <div className="container flex flex-col  bg-white">
-        <div className="relative flex flex-wrap items-center justify-between w-screen bg-white group py-7 shrink-0">
+        <div className="relative flex flex-wrap items-center justify-between w-screen bg-white group py-4 shrink">
           <div className="flex">
-            <img src="https://cdn-icons-png.flaticon.com/512/1668/1668966.png" alt=""  className="max-h-9 min-w-10 ml-1"/>
+            <img src="https://cdn-icons-png.flaticon.com/512/1668/1668966.png" alt=""  className="max-h-9 min-w-10 "/>
             <h3 className="px-4 font-extrabold text-pretty text-2xl">Hotel Finder</h3>
             
           </div>
-          <div className="items-center justify-between hidden gap-12 text-black md:flex">
+          <div className="items-center hidden gap-8 text-black md:flex">
             <a className="text-md font-bold  rounded text-dark-grey-700 hover:text-dark-grey-900 hover:bg-slate-100" href="#features">Amenities</a>
             <a className="text-md font-bold  rounded text-dark-grey-700 hover:text-dark-grey-900 hover:bg-slate-100" href="#Products">Hotels</a>
             <a className="text-md font-bold rounded text-dark-grey-700 hover:text-dark-grey-900 hover:bg-slate-100" href="#Testimonials">Destinations</a>
             <a className="text-md font-bold rounded text-dark-grey-700 hover:text-dark-grey-900 hover:bg-slate-100" href="#instructors">Testimonials</a>
             <a className="text-md font-bold rounded text-dark-grey-700 hover:text-dark-grey-900 hover:bg-slate-100" href="#About">Contact Us</a>
           </div>
-          <div className="items-center hidden  gap-8 md:flex">
+          <div className="justify-items-start hidden gap-5 md:flex">
             
-            <Button className="flex items-center text-sm font-bold bg-blue-950 text-white hover:text-blue-950 hover:bg-slate-300 transition duration-300">Log In</Button>
-            
-           
-           <Button className="flex items-center text-sm font-bold bg-blue-950 text-white hover:text-blue-950 hover:bg-slate-300 transition duration-300">
-              Sign Up
-            </Button>
-           
+            <Button className="flex items-center mr-10 text-sm font-bold bg-blue-950 text-white hover:text-blue-950 hover:bg-slate-300 transition duration-300">Join now</Button>
             
           </div>
 

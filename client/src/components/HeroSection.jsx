@@ -18,12 +18,9 @@ const HeroSection = () => {
   Discover <span class="text-purple-600">amenities</span> that redefine <span class="text-dark-grey-900">luxury</span> and relaxation.
 </h2>
 
-
-          
           <div className="flex flex-col items-center gap-4 ml-5 mt-5 lg:flex-row">
-            <Link to='/auth'>
             <Button className="flex items-center  py-6 text-sm font-bold text-white px-7 bg-blue-950 hover:bg-slate-300 hover:text-blue-950 focus:ring-4 focus:ring-purple-blue-100 transition duration-300 rounded-xl">Get started now</Button>
-            </Link>
+            
             
             <Button className="flex items-center py-6 text-sm font-medium px-7 bg-purple-900 text-white transition duration-300 rounded-2xl">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 mr-2 ">
@@ -34,7 +31,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="col-span-1 mt-10 mx-0 md:mt-0">
-          <img src={headerimg} alt="hero image" />
+          <img src={headerimg} className="w-full" alt="hero image" />
         </div>
       </div>
       
