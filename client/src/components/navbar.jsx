@@ -12,8 +12,8 @@ const Navbar = () => {
       <div className="container flex flex-col  bg-white">
         <div className="relative flex flex-wrap items-center justify-between w-screen bg-white group py-7 shrink-0">
           <div className="flex">
-            <img src="https://cdn-icons-png.flaticon.com/512/1668/1668966.png" alt=""  className="max-h-9 min-w-10"/>
-            <h3 className="px-3 font-extrabold text-pretty text-2xl">Hotel Finder</h3>
+            <img src="https://cdn-icons-png.flaticon.com/512/1668/1668966.png" alt=""  className="max-h-9 min-w-10 ml-1"/>
+            <h3 className="px-4 font-extrabold text-pretty text-2xl">Hotel Finder</h3>
             
           </div>
           <div className="items-center justify-between hidden gap-12 text-black md:flex">
