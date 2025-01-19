@@ -413,79 +413,86 @@ function Content() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Offer Card 1 */}
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 animate__animated animate__fadeInUp">
-                <div className="relative">
-                  <div className="bg-neutral-200 h-48" />
-                  <div className="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    Save 25%
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    Weekend Getaway
-                  </h3>
-                  <div className="flex items-center mb-4">
-                    <span className="text-3xl font-bold text-blue-600">
-                      $199
-                    </span>
-                    <span className="text-gray-500 line-through ml-2">
-                      $265
-                    </span>
-                    <span className="text-sm text-gray-600 ml-2">/night</span>
-                  </div>
-                  <ul className="space-y-2 mb-6">
-                    <li className="flex items-center text-gray-600">
-                      <svg
-                        className="w-5 h-5 text-green-500 mr-2"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      Breakfast Included
-                    </li>
-                    <li className="flex items-center text-gray-600">
-                      <svg
-                        className="w-5 h-5 text-green-500 mr-2"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      Free Spa Access
-                    </li>
-                    <li className="flex items-center text-gray-600">
-                      <svg
-                        className="w-5 h-5 text-green-500 mr-2"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      Late Checkout
-                    </li>
-                  </ul>
-                  <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
-                    Book This Offer
-                  </button>
-                </div>
-              </div>
+<div className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 animate__animated animate__fadeInUp">
+  <div className="relative">
+    {/* Image Section */}
+    <img
+      src="https://www.shutterstock.com/image-photo/girl-standing-car-sunroof-enjoying-260nw-1789455020.jpg" // Replace with your image URL
+      alt="Weekend Getaway"
+      className="w-full h-48 object-cover"
+    />
+    <div className="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+      Save 25%
+    </div>
+  </div>
+  <div className="p-6">
+    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+      Weekend Getaway
+    </h3>
+    <div className="flex items-center mb-4">
+      <span className="text-3xl font-bold text-blue-600">$199</span>
+      <span className="text-gray-500 line-through ml-2">$265</span>
+      <span className="text-sm text-gray-600 ml-2">/night</span>
+    </div>
+    <ul className="space-y-2 mb-6">
+      <li className="flex items-center text-gray-600">
+        <svg
+          className="w-5 h-5 text-green-500 mr-2"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            fillRule="evenodd"
+            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+            clipRule="evenodd"
+          />
+        </svg>
+        Breakfast Included
+      </li>
+      <li className="flex items-center text-gray-600">
+        <svg
+          className="w-5 h-5 text-green-500 mr-2"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            fillRule="evenodd"
+            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+            clipRule="evenodd"
+          />
+        </svg>
+        Free Spa Access
+      </li>
+      <li className="flex items-center text-gray-600">
+        <svg
+          className="w-5 h-5 text-green-500 mr-2"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            fillRule="evenodd"
+            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+            clipRule="evenodd"
+          />
+        </svg>
+        Late Checkout
+      </li>
+    </ul>
+    <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+      Book This Offer
+    </button>
+  </div>
+</div>
+
               {/* Offer Card 2 */}
               <div className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 animate__animated animate__fadeInUp">
                 <div className="relative">
-                  <div className="bg-neutral-200 h-48" />
+                  {/* Image Section */}
+    <img
+      src="https://media1.thrillophilia.com/filestore/jezkw1hz3yrpmiqlbobdguc5f54m_shutterstock_1938178192.jpg?w=400&dpr=2" // Replace with your image URL
+      alt="Family Package"
+      className="w-full h-48 object-cover"
+    />
                   <div className="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                     Save 30%
                   </div>
@@ -555,7 +562,12 @@ function Content() {
               {/* Offer Card 3 */}
               <div className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 animate__animated animate__fadeInUp">
                 <div className="relative">
-                  <div className="bg-neutral-200 h-48" />
+                   {/* Image Section */}
+    <img
+      src="https://www.conradpune.com/wp-content/uploads/2022/07/8.png" // Replace with your image URL
+      alt="Family Package"
+      className="w-full h-48 object-cover"
+    />
                   <div className="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                     Save 20%
                   </div>

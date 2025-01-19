@@ -15,7 +15,7 @@ function footer() {
                   Your trusted partner in finding the perfect accommodation for
                   every journey.
                 </p>
-                <div className="flex space-x-4">
+                <div className="flex space-x-4 ml-20">
                   <a
                     href="#"
                     className="text-gray-400 hover:text-white transition-colors duration-300"
