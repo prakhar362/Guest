@@ -17,11 +17,11 @@ const Navbar = () => {
             
           </div>
           <div className="items-center hidden gap-8 text-black md:flex">
-            <a className="text-md font-bold  rounded text-dark-grey-700 hover:text-dark-grey-900 hover:bg-slate-100" href="#features">Amenities</a>
-            <a className="text-md font-bold  rounded text-dark-grey-700 hover:text-dark-grey-900 hover:bg-slate-100" href="#Products">Hotels</a>
-            <a className="text-md font-bold rounded text-dark-grey-700 hover:text-dark-grey-900 hover:bg-slate-100" href="#Testimonials">Destinations</a>
-            <a className="text-md font-bold rounded text-dark-grey-700 hover:text-dark-grey-900 hover:bg-slate-100" href="#instructors">Testimonials</a>
-            <a className="text-md font-bold rounded text-dark-grey-700 hover:text-dark-grey-900 hover:bg-slate-100" href="#About">Contact Us</a>
+            <a className="text-md font-bold  rounded text-dark-grey-700 hover:text-dark-grey-900 hover:bg-slate-100" href="#Amenities">Amenities</a>
+            <a className="text-md font-bold  rounded text-dark-grey-700 hover:text-dark-grey-900 hover:bg-slate-100" href="#Hotels">Hotels</a>
+            <a className="text-md font-bold rounded text-dark-grey-700 hover:text-dark-grey-900 hover:bg-slate-100" href="#Destinations">Destinations</a>
+            <a className="text-md font-bold rounded text-dark-grey-700 hover:text-dark-grey-900 hover:bg-slate-100" href="#Testimonials">Testimonials</a>
+            <a className="text-md font-bold rounded text-dark-grey-700 hover:text-dark-grey-900 hover:bg-slate-100" href="#Conatct Us">Contact Us</a>
           </div>
           <div className="justify-items-start hidden gap-5 md:flex">
             
@@ -62,20 +62,20 @@ const Navbar = () => {
           Close
         </Button>
         <div className="flex flex-col items-start p-6 gap-4">
-          <a href="#features" className="text-sm font-medium text-dark-grey-700 hover:text-dark-grey-900">
-           Features
+          <a href="#Amenities" className="text-sm font-medium text-dark-grey-700 hover:text-dark-grey-900">
+           Amenities
           </a>
-          <a href="#Products" className="text-sm font-medium text-dark-grey-700 hover:text-dark-grey-900">
-            Product
+          <a href="#Hotels" className="text-sm font-medium text-dark-grey-700 hover:text-dark-grey-900">
+            Hotels
+          </a>
+          <a href="#Destinations" className="text-sm font-medium text-dark-grey-700 hover:text-dark-grey-900">
+          Destinations
           </a>
           <a href="#Testimonials" className="text-sm font-medium text-dark-grey-700 hover:text-dark-grey-900">
             Testimonials
           </a>
-          <a href="#instructors" className="text-sm font-medium text-dark-grey-700 hover:text-dark-grey-900">
-            Instructors
-          </a>
           <a href="#About" className="text-sm font-medium text-dark-grey-700 hover:text-dark-grey-900">
-            About Us
+            Conatct Us
           </a>
          
           <Button className="px-4 py-2 text-sm font-medium text-white bg-gray-800  hover:bg-gray-300 hover:text-black ">
