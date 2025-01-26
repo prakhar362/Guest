@@ -37,7 +37,7 @@ const Form = (hotelId) => {
     e.preventDefault();
   
     try {
-      const response = await fetch("http://localhost:5000/api/guest/addGuest", {
+      const response = await fetch("https://hotelfinder-admin.onrender.com/api/guest/addGuest", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

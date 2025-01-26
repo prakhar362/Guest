@@ -4,12 +4,12 @@ import { useNavigate } from "react-router-dom";
 function HotelCard() {
   const [hotels, setHotels] = useState([]);
   const navigate = useNavigate();
-  const URL = "http://localhost:5000"; // or the base URL for your server
+  const URL = "https://hotelfinder-admin.onrender.com"; 
 
   useEffect(() => {
     const fetchHotels = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/main/displayHotel");
+        const response = await fetch("https://hotelfinder-admin.onrender.com/api/main/displayHotel");
         const data = await response.json();
         if (Array.isArray(data)) {
           setHotels(data);
