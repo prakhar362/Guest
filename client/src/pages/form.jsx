@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 
-const form = () => {
+const Form = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     mobileNumber: "",
@@ -12,9 +12,21 @@ const form = () => {
     stayTo: "",
     email: "",
     idProofNumber: "",
+    hotelId: "",  // Add hotelId to the form data
   });
 
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // Extract hotelId from location state (passed from the HotelCard component)
+  useEffect(() => {
+    if (location.state && location.state.hotelId) {
+      setFormData((prevData) => ({
+        ...prevData,
+        hotelId: location.state.hotelId, // Set the hotelId in the form data
+      }));
+    }
+  }, [location.state]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,7 +37,7 @@ const form = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/guests", formData);
+      await axios.post("http://localhost:5000/api/guest/addGuest", formData);
       navigate("/thankyou");
     } catch (error) {
       console.error("Error saving guest details:", error);
@@ -161,4 +173,4 @@ const form = () => {
   );
 };
 
-export default form;
+export default Form;
