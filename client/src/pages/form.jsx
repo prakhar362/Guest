@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import axios from "axios";
 
-const Form = () => {
+const Form = (hotelId) => {
   const [formData, setFormData] = useState({
-    fullName: "",
-    mobileNumber: "",
+    name: "",
+    phone: "",
     address: "",
-    purpose: "Business",
+    purposeOfVisit: "Business",
     stayFrom: "",
     stayTo: "",
     email: "",
     idProofNumber: "",
-    hotelId: "",  // Add hotelId to the form data
+    hotelId: hotelId,  // Add hotelId to the form data
   });
 
   const navigate = useNavigate();
@@ -21,6 +20,7 @@ const Form = () => {
   // Extract hotelId from location state (passed from the HotelCard component)
   useEffect(() => {
     if (location.state && location.state.hotelId) {
+      console.log(location.state.hotelId);
       setFormData((prevData) => ({
         ...prevData,
         hotelId: location.state.hotelId, // Set the hotelId in the form data
@@ -35,10 +35,25 @@ const Form = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
-      await axios.post("http://localhost:5000/api/guest/addGuest", formData);
-      navigate("/thankyou");
+      const response = await fetch("http://localhost:5000/api/guest/addGuest", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      const data = await response.json();
+  
+      if (response.ok) {
+        // If request is successful, navigate to the thank you page
+        navigate("/thankyou");
+      } else {
+        // If there is an error from the server, log it
+        console.error("Error:", data.message);
+      }
     } catch (error) {
       console.error("Error saving guest details:", error);
     }
@@ -55,8 +70,8 @@ const Form = () => {
           <span className="text-gray-700 font-medium">Full Name</span>
           <input
             type="text"
-            name="fullName"
-            value={formData.fullName}
+            name="name" // Fixed name attribute
+            value={formData.name}
             onChange={handleChange}
             placeholder="Enter your full name"
             className="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -69,8 +84,8 @@ const Form = () => {
           <span className="text-gray-700 font-medium">Mobile Number</span>
           <input
             type="tel"
-            name="mobileNumber"
-            value={formData.mobileNumber}
+            name="phone" // Fixed name attribute
+            value={formData.phone}
             onChange={handleChange}
             placeholder="Enter your mobile number"
             className="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -95,8 +110,8 @@ const Form = () => {
         <label className="block mb-4">
           <span className="text-gray-700 font-medium">Purpose of Visit</span>
           <select
-            name="purpose"
-            value={formData.purpose}
+            name="purposeOfVisit" // Fixed name attribute
+            value={formData.purposeOfVisit}
             onChange={handleChange}
             className="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
             required
