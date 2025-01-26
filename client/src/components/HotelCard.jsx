@@ -15,6 +15,7 @@ function HotelCard() {
           setHotels(data);
         } else if (data.data && Array.isArray(data.data)) {
           setHotels(data.data);
+          console.log("data array: ",data.data);
         } else {
           console.error("Unexpected data format:", data.data);
           setHotels([]);
@@ -29,9 +30,10 @@ function HotelCard() {
   }, []);
 
   const handleBookNow = (hotelId) => {
-    navigate(`/form`, { state: { hotelId } });
+    console.log(hotelId);
+    navigate(`/form`, { state: { hotelId } }); // Pass hotelId directly to the form
   };
-
+  
   return (
     <div>
       <section id="featured-hotels" className="bg-white py-20">
@@ -50,6 +52,7 @@ function HotelCard() {
                 key={hotel.id}
                 className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300"
               >
+                
                 {/* Hotel Logo */}
                 <div className="bg-gray-200 h-48 flex items-center justify-center">
                   <img
@@ -104,7 +107,7 @@ function HotelCard() {
                       $ 300
                     </span>
                     <button
-                      onClick={() => handleBookNow(hotel.id)}
+                      onClick={() => handleBookNow(hotel._id)}
                       className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
                     >
                       Book Now
